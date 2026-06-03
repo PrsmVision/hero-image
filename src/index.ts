@@ -1,1 +1,1 @@
-export { Contributors, HeroImage, contributors } from "./components";
+export { HeroImage } from "./components";

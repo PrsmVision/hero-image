@@ -1,4 +1,4 @@
-import type { QuartzComponent, QuartzComponentProps } from "@quartz-community/types";
+import type { QuartzComponent, QuartzComponentProps, QuartzComponentConstructor } from "@quartz-community/types";
 
 const HeroImage: QuartzComponent = (props: QuartzComponentProps) => {
   const hero = props.fileData?.frontmatter?.hero as string | undefined;
@@ -28,4 +28,4 @@ HeroImage.css = `
   }
 `;
 
-export default HeroImage;
+export default (() => HeroImage) satisfies QuartzComponentConstructor;

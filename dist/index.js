@@ -143,7 +143,7 @@ HeroImage.css = `
     display: block;
   }
 `;
-var HeroImage_default = HeroImage;
+var HeroImage_default = (() => HeroImage);
 export {
   Contributors_default as Contributors,
   HeroImage_default as HeroImage,

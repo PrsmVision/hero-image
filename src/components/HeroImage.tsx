@@ -1,9 +1,9 @@
 import type { QuartzComponent, QuartzComponentProps, QuartzComponentConstructor } from "@quartz-community/types";
 
-const HeroImage: QuartzComponent = (props: QuartzComponentProps) => {
+const HeroImage: QuartzComponent = (props?: QuartzComponentProps) => {
+  if (!props?.fileData) return null
   const hero = props.fileData?.frontmatter?.hero as string | undefined;
   if (!hero) return null;
-
   return (
     <div class="hero-image popover-hint">
       <img src={hero} alt={props.fileData?.frontmatter?.title ?? ""} />
@@ -18,7 +18,6 @@ HeroImage.css = `
     border-radius: 8px;
     overflow: hidden;
   }
-
   .hero-image img {
     width: 100%;
     height: 220px;
